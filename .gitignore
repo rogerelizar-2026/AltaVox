@@ -1,7 +1,5 @@
 ```
-# Dependencies
-node_modules/
-
-# Vite build artifacts
-node_modules/.vite/
+# Logs and temp files
+*.log
+vite.log
 ```
