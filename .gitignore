@@ -1,24 +1,5 @@
-```
-# Batch files and executables
-*.bat
-*.exe
-*.com
-*.dll
-*.so
-*.dylib
+(index.html is a source file, so no ignores needed)
 
-# Logs and temp files
-*.log
-*.tmp
-*.temp
-*.cache
+```text
 
-# Environment and config
-.env
-.env.local
-.env.*
-
-# OS generated files
-.DS_Store
-Thumbs.db
 ```
