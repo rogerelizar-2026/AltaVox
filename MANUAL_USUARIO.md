@@ -6,6 +6,69 @@
 
 ---
 
+## Antes de Comecar: Instalacao do Node.js
+
+O **AtaVoz** precisa do **Node.js** instalado no seu computador para funcionar. O Node.js e uma plataforma gratuita que permite executar aplicacoes modernas no seu PC.
+
+### Passo 1: Baixar o Node.js
+
+1. Abra seu navegador (Chrome, Firefox, Edge, etc.)
+2. Acesse o site oficial: **https://nodejs.org/**
+3. Voce vera dois botoes verdes:
+   - **LTS** (Recomendado) - Versao mais estavel e testada
+   - Current - Versao mais recente (pode ter bugs)
+4. Clique no botao **LTS** (recomendado para maioria dos usuarios)
+
+### Passo 2: Instalar o Node.js
+
+**No Windows:**
+1. Após baixar, clique duas vezes no arquivo baixado (ex: `node-v20.x.x-x64.msi`)
+2. Clique em "Next" em todas as telas
+3. Aceite os termos de uso
+4. Mantenha as opcoes padrao de instalacao
+5. Clique em "Install" e aguarde
+6. Quando terminar, clique em "Finish"
+
+**No Mac:**
+1. Após baixar, clique duas vezes no arquivo `.pkg`
+2. Siga as instrucoes do instalador
+3. Digite sua senha quando solicitado
+4. Aguarde a conclusao da instalacao
+
+**No Linux:**
+- Use o gerenciador de pacotes da sua distribuicao ou baixe do site oficial
+
+### Passo 3: Verificar a Instalacao
+
+1. No Windows: Pressione `Windows + R`, digite `cmd` e pressione Enter
+2. No Mac/Linux: Abra o Terminal
+3. Digite o comando: `node --version`
+4. Se aparecer um numero (ex: `v20.11.0`), esta instalado corretamente!
+
+### Passo 4: Iniciar o AtaVoz
+
+**No Windows:**
+1. V ate a pasta onde esta o AtaVoz
+2. Dê dois cliques no arquivo `iniciar.bat`
+3. O sistema instalara as dependencias automaticamente (primeira vez apenas)
+4. O navegador abrira com o AtaVoz
+
+**No Mac/Linux:**
+1. Abra o Terminal na pasta do AtaVoz
+2. Digite: `./iniciar.sh`
+3. Aguarde a abertura automatica no navegador
+
+### Problemas Comuns
+
+| Problema | Solucao |
+|----------|---------|
+| "Node.js nao encontrado" | Reinstale o Node.js e reinicie o computador |
+| "Acesso negado" no Windows | Execute `iniciar.bat` como Administrador (botao direito) |
+| Dependencias nao instalam | Verifique se ha conexao com internet na primeira execucao |
+| Porta ja em uso | Feche outros programas e tente novamente |
+
+---
+
 ## Bem-vindo ao AtaVoz!
 
 O **AtaVoz** e um programa que transforma gravacoes de audio em texto escrito, mostrando **quem falou o que** e **quando**. Tudo acontece no seu computador - nada e enviado para a internet.
