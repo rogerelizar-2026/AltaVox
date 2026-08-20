@@ -1,7 +1,4 @@
 ```
-# Dependencies
-node_modules/
-
-# Vite build artifacts
-node_modules/.vite/
+# Batch files specific to Windows
+iniciar.bat
 ```
