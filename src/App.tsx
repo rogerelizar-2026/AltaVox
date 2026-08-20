@@ -25,6 +25,10 @@ import { IcBook, IcCpu, IcHistory, IcLogo, IcOffline } from "./components/icons"
 const MAX_FILES = 2;
 const MAX_SEC = 30 * 60;
 
+const openManual = () => {
+  window.open("manual_altavoz.html", "_blank");
+};
+
 function AppShell() {
   const toast = useToast();
   const [step, setStep] = useState<StepIndex>(0);
@@ -369,6 +373,14 @@ function AppShell() {
           </div>
 
           <div className="flex items-center gap-1.5">
+            <button
+              onClick={openManual}
+              className="flex items-center gap-2 rounded-lg border border-brand-400/40 bg-brand-400/10 px-3 py-2 text-[13px] font-medium text-brand-300 transition-all hover:border-brand-400/70 hover:bg-brand-400/20 hover:text-brand-200 active:scale-95 cursor-pointer"
+              title="Manual do AltaVoz (by rogerelizar)"
+            >
+              <IcBook size={16} />
+              <span className="max-sm:hidden">Manual</span>
+            </button>
             <button
               onClick={() => setGlossaryOpen(true)}
               className="flex items-center gap-2 rounded-lg border border-ink-600 bg-ink-800 px-3 py-2 text-[13px] font-medium text-mist-200 transition-all hover:border-brand-400/50 hover:text-brand-300 active:scale-95 cursor-pointer"
