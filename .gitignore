@@ -1,5 +1,1 @@
-node_modules/
-.next/
-dist/
-build/
-*.log
+Nothing to output - the change list contains only a markdown file (MANUAL_USUARIO.md) which is a source/config file and should not be ignored.
