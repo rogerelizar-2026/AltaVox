@@ -1,0 +1,54 @@
+==================================================
+  SISTEMA ALTA VOZ - INSTRUÇÕES RÁPIDAS
+==================================================
+
+🚀 COMO COMEÇAR (MÉTODO SIMPLES):
+
+WINDOWS:
+  → Dê dois cliques em "iniciar.bat"
+
+LINUX / MAC:
+  → Execute no terminal: ./iniciar.sh
+
+--------------------------------------------------
+
+📋 PRÉ-REQUISITO (só precisa uma vez):
+
+Instale o Node.js em: https://nodejs.org/
+(Baixe a versão LTS recomendada)
+
+--------------------------------------------------
+
+⏱️ TEMPO DE INICIALIZAÇÃO:
+
+• Primeira vez: 2-5 minutos (instala dependências)
+• Próximas vezes: 5-10 segundos
+
+--------------------------------------------------
+
+✨ O QUE O SCRIPT FAZ AUTOMATICAMENTE:
+
+✓ Verifica se Node.js está instalado
+✓ Instala todas as dependências (só na 1ª vez)
+✓ Inicia o servidor automaticamente
+✓ Abre o sistema no seu navegador
+
+--------------------------------------------------
+
+⚠️ IMPORTANTE:
+
+NÃO abra o index.html diretamente!
+Use sempre o arquivo iniciar.bat ou iniciar.sh
+
+--------------------------------------------------
+
+📖 MAIS INFORMAÇÕES:
+
+Veja o arquivo "COMO_INICIAR.md" para detalhes
+completos e perguntas frequentes.
+
+--------------------------------------------------
+
+🎉 O sistema funciona 100% offline após instalar!
+
+==================================================
