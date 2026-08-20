@@ -12,4 +12,10 @@ export default defineConfig({
       port: 3000,
     },
   },
+  test: {
+    globals: true,
+    environment: "happy-dom",
+    setupFiles: ["./src/test/setup.ts"],
+    include: ["src/**/*.test.{ts,tsx}"],
+  },
 });
