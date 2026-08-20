@@ -1,58 +1,53 @@
 @echo off
-chcp 65001 >nul
-title Instalacao e Inicializacao do AltaVoz
+title Servidor Altavoz - Rodando
+color 0A
 
-echo ============================================
-echo   SISTEMA ALTA VOZ - INSTALACAO AUTOMATICA
-echo ============================================
+echo ==========================================
+echo   SERVIDOR ALTAVOZ
+echo ==========================================
 echo.
-
-REM Verificar se Node.js esta instalado
-where node >nul 2>nul
-if %errorlevel% neq 0 (
-    echo [ERRO] Node.js nao encontrado!
+echo Verificando Node.js...
+node --version >nul 2>&1
+if errorlevel 1 (
+    color 0C
     echo.
-    echo Por favor, instale o Node.js antes de continuar:
-    echo https://nodejs.org/
+    echo ERRO CRITICO: Node.js nao esta instalado!
+    echo Por favor, instale o Node.js em https://nodejs.org
     echo.
     pause
     exit /b 1
 )
-
-echo [OK] Node.js detectado: 
-node --version
+echo Node.js encontrado!
 echo.
 
-REM Verificar se node_modules existe
-if not exist "node_modules" (
-    echo [INFO] Instalando dependencias...
-    echo Isso pode levar alguns minutos na primeira vez.
+echo Instalando/Verificando dependencias (isso pode demorar na primeira vez)...
+call npm install
+if errorlevel 1 (
+    color 0C
     echo.
-    call npm install --loglevel=error
-    if %errorlevel% neq 0 (
-        echo.
-        echo [ERRO] Falha na instalacao das dependencias.
-        pause
-        exit /b 1
-    )
-    echo.
-    echo [OK] Dependencias instaladas com sucesso!
-) else (
-    echo [OK] Dependencias ja estao instaladas.
+    echo ERRO: Falha ao instalar dependencias.
+    pause
+    exit /b 1
 )
-
-echo.
-echo ============================================
-echo   INICIANDO SERVIDOR DE DESENVOLVIMENTO
-echo ============================================
-echo.
-echo O sistema sera aberto automaticamente no seu navegador.
-echo Para parar o servidor, pressione Ctrl+C nesta janela.
-echo.
-echo ============================================
+echo Dependencias OK!
 echo.
 
-REM Iniciar usando npx para garantir que o vite local seja usado
-npx vite --host
+echo ==========================================
+echo Iniciando servidor de desenvolvimento...
+echo.
+echo O navegador sera aberto automaticamente!
+echo MANTENHA ESTA JANELA ABERTA.
+echo Para parar, pressione Ctrl+C ou feche esta janela.
+echo ==========================================
+echo.
 
-pause
+REM Executa o vite via npm run dev que e a forma mais confiavel no Windows
+call npm run dev
+
+REM Se o comando acima retornar, mantem a janela aberta
+if errorlevel 1 (
+    echo.
+    echo O servidor foi interrompido ou ocorreu um erro.
+    echo Pressione qualquer tecla para fechar...
+    pause >nul
+)
