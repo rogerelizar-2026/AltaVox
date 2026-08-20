@@ -1,1 +1,7 @@
-(manual_altavoz.html, MANUAL_USUARIO.md, and src/App.tsx are all source/config files - no build artifacts, dependencies, or temp files in the changes)
+```
+# Dependencies
+node_modules/
+
+# Vite build artifacts
+node_modules/.vite/
+```
