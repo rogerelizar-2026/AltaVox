@@ -52,6 +52,7 @@ echo.
 echo ============================================
 echo.
 
-call npm run dev
+REM Iniciar usando npx para garantir que o vite local seja usado
+npx vite --host
 
 pause
